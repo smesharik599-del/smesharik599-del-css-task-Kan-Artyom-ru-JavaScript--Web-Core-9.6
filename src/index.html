@@ -1,16 +1,508 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <img src="./img/webpack.svg" alt="Webpack Logo" width="200px" />
-    <h3>Welcome to Webpack 5 starter </h3>
-  </body>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ремонт техники CPS</title>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <section class="left-side-background" id="back-br">
+        <div class="left-side"  id="br">
+            <div class="top-img">
+                <a href="#">
+                    <img src="img/burger.svg" alt="search" class="search-b" id="close">
+                </a>
+                <a href="#">
+                    <img src="img/Group (1).svg" alt="Group" class="group-b">
+                </a>
+                <a href="#">
+                    <img src="img/search.svg" alt="search" class="search-b">
+                </a>
+            </div>
+            <div class="title">
+                <div class="half-circle"></div>
+                <div class="title_text">
+                    Ремонт техники
+                </div>
+            </div>
+            <div class="list-discription">
+                <p class="disc">Услуги и сервисы</p>
+                <p class="disc">Корпоративным клиентам</p>
+                <p class="disc">Продавцам техники</p>
+                <p class="disc">Партнерам</p>
+                <p class="disc">Производителям</p>
+                <p class="disc">Наши сервисные центры</p>
+                <p class="disc">Контакты</p>
+            </div>
+            <footer class="our-contact">
+                <div class="contact-img">
+                    <a href="#">
+                        <img src="img/chatcopy.svg" alt="phone">
+                    </a>
+                    <a href="#">
+                        <img src="img/chat.svg" alt="chat">
+                    </a>
+                    <a href="#">
+                        <img src="img/profile.svg" alt="profile">
+                    </a>
+                </div>
+                <p class="mail">
+                    mail@cps.com
+                </p>
+                <p class="number">
+                    8 800 890 8900
+                </p>
+                <div class="lang">
+                    <input type="radio" name="lang-chose" id="ru" value="1" class="lang-choose_button" checked hidden>                
+                    <label for="ru">RU</label>
+                    <input type="radio" name="lang-chose" id="en" value="2" class="lang-choose_button" hidden>
+                    <label for="en">EN</label>
+                    <input type="radio" name="lang-chose" id="ch" value="3" class="lang-choose_button" hidden> 
+                    <label for="ch">CH</label>
+                </div>
+            </footer>
+        </div>
+    </section>
+    <header class="header-page">
+        <div class="header-page__first-adaptive">
+            <a href="#" id = "burger"><img src="img/burgerreal.svg" alt="header-page__burger-menu" class="header-page__burger-menu"></a>
+            <div class="header-page__vline-adaptive"></div>
+            <a href="#"><img src="img/Group.svg" alt="header-page__logo" class="header-page__logo"></a>
+        </div>
+        <div class="header-page__second-adaptive">
+            <a href="#" class="header-page__call"><img src="img/call.svg" alt="call"></a>
+            <a href="#" class="header-page__chat"><img src="img/chat.svg" alt="chat"></a>
+            <a href="#" class="header-page__profile"><img src="img/profile.svg" alt="profile" ></a>
+            <div class="header-page__vline"></div>
+            <a href="#"><img src="img/repair.svg" alt="header-page__repair" class="header-page__repair"></a>
+            <a href="#"><img src="img/checkstatus.svg" alt="header-page__check" class="header-page__check"></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="first-page">
+            <div class="first-page__title">
+                <div class="first-page__title-part">
+                    <div class="first-page__half-oval"></div>
+                    <div class="first-page__first-text">
+                        Услуги и сервисы
+                    </div>
+                </div>
+                <div class="first-page__adaptive">
+                    <div class="adaptive__icon">
+                        <a href="#"><p class="adaptive__cont">Оставить заявку</p></a>
+                        <a href="#"><img src="img/repair.svg" alt="repair"></a>
+                    </div>
+                    <div class="adaptive__icon">
+                        <a href="#"><p class="adaptive__cont">Статус ремонта</p></a>
+                        <a href="#"><img src="img/checkstatus.svg" alt="check"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="main-scroll">
+                <div class="scroll">
+                    <div>
+                        <input type="radio" name="scroll-group" id="tab1" checked hidden>
+                        <label for="tab1" class="scroll__first-block">
+                        Ремонтируемые устройства
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="scroll-group" id="tab2" hidden>
+                        <label for="tab2" class="scroll__second-block">
+                            Дополнительные услуги
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="scroll-group" id="tab3" hidden>
+                        <label for="tab3" class="scroll__third-block">
+                            Цены на услуги
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="scroll-group" id="tab4" hidden>
+                        <label for="tab4" class="scroll__fourth-block">
+                            Адреса сервисных центров
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="scroll-group" id="tab5" hidden>
+                        <label for="tab5" class="scroll__fifth-block">
+                            Специальные цены
+                        </label>
+                    </div>
+                </div>    
+            </div>
+            <div class="feedback">
+                Отзывы
+            </div>
+            <div class="text-block">
+                <div class="text-block__first-text">
+                    Мы являемся авторизованным 
+                    сервисным центром по ремонту техники
+                    Dell. Только у нас вы можете 
+                    отремонтировать свой ноутбук Dell с 
+                    официальной гарантией производителя.
+                    <div class="text-block__adaptive1">
+                        Мы успешно работаем с 1992 года и
+                        заслужили репутацию надежного партнера
+                        <div class="text-block__adaptive2">
+                            что подтверждает большое количество постоянных клиентов.
+                            Мы гордемся тем, что к нам обращаются по рекомендациям и,
+                            в свою очередь, советуют нас родным и близким.
+                        </div>
+                    </div>
+                    <div class="text-block__next">
+                        <a href="#"><img src="img/expand.svg" alt="arrow" class="text-block__arrow"></a>
+                        <a href="#" class="text-block__next-text">Читать далее</a>
+                    </div>
+                </div>
+                <div><img src="img/mg_3223.svg" alt="image" class="text-block__main-image"></div>
+            </div>
+        </section>
+        <div class="title-next">
+            <h2 class="text">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ БРЕНДОВ</h2>
+        </div>
+        <section class="swipe">
+            <div class="dont">
+                <div class="brand"><a href="#"><img src="img/Bitmap (1).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand"><a href="#"><img src="img/Bitmap (2).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand"><a href="#"><img src="img/Bitmap (3).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand"><a href="#"><img src="img/Bitmap.svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand"><a href="#"><img src="img/Bitmap (1).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand"><a href="#"><img src="img/Bitmap (2).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand active2" disable><a href="#"><img src="img/Bitmap (3).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand active2" disable><a href="#"><img src="img/Bitmap.svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand active active2"><a href="#"><img src="img/Bitmap (1).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand active active2"><a href="#"><img src="img/Bitmap (2).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+                <div class="brand active active2"><a href="#"><img src="img/Bitmap (3).svg" alt=""></a><a href="#"><img src="img/go.svg" alt="3"></a></div>
+            </div>
+            <div class="button left">
+                <img src="img/icon.svg" alt="e">
+                <div id="together">Показать всё</div>
+            </div>
+        </section>
+        <section class="part2">
+            <div class="part2__tech-name">
+            <h2 class="text">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ</h2>
+            </div>
+            <section class="swipe-under">
+                <div class="swipe-under_box"><a href="#"><div class="swipe-under_object"><p>Ремонт ноутбуков</p><img src="img/go.svg" alt="go"></div></a></div>
+                <div class="swipe-under_box"><a href="#"><div class="swipe-under_object"><p>Ремонт планшетов</p><img src="img/go.svg" alt="go"></div></a></div>
+                <div class="swipe-under_box"><a href="#"><div class="swipe-under_object"><p>Ремонт ПК </p><img src="img/go.svg" alt="go"></div></a></div>
+                <div class="swipe-under_box" id="op-cl"><a href="#"><div class="swipe-under_object"><p>Ремонт  мониторов</p><img src="img/go.svg" alt="go"></div></a></div>
+                <div class="swipe-under_box none"><a href="#"><div class="swipe-under_object"><p>Ремонт ноутбуков</p><img src="img/go.svg" alt="go"></div></a></div>
+                <div class="swipe-under_box none"><a href="#"><div class="swipe-under_object"><p>Ремонт планшетов</p><img src="img/go.svg" alt="go"></div></a></div>
+                <div class="swipe-under_box none"><a href="#"><div class="swipe-under_object"><p>Ремонт ПK</p><img src="img/go.svg" alt="go"></div></a></div>
+                <div class="swipe-under_box none"><a href="#"><div class="swipe-under_object"><p>Ремонт мониторов</p><img src="img/go.svg" alt="go"></div></a></div>
+            </section>
+                <div class="button">
+                    <img src="img/icon.svg" alt="e">
+                    <div id="opened">Показать всё</div>
+                </div>
+            <section class="cost">
+                <div class="text cost__title">
+                    <h2>ЦЕНЫ НА УСЛУГИ</h2>
+                </div>
+                <div class="cost_notes">
+                    <p class="text notes_1">Ремонтные услуги</p>
+                    <p class="text notes_2">Цена</p>
+                    <p class="text notes_3">Срок</p>
+                </div>
+                <div class="cost__list">
+                    <div class="cost__list-object"><p class="text un-notes1">Диагностика</p><p  class="text un-notes2">Бесплатно</p><p class="text un-notes3">30 мин</p><a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a></div>
+                    <hr class="cost__list-underlline">
+                    <div class="cost__list-object"><p class="text un-notes1">Замена дисплея</p><p  class="text un-notes2">1 000 ₽</p><p class="text un-notes3">30 мин</p><a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a></div>
+                    <hr class="cost__list-underlline">
+                    <div class="cost__list-object"><p class="text un-notes1">Замена полифонического динамика</p><p  class="text un-notes2">1 000 ₽</p><p class="text un-notes3">30 мин</p><a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a></div>
+                    <hr class="cost__list-underlline">
+                    <div class="cost__list-object"><p class="text un-notes1">Тестирование с выдачей технического заключения</p><p  class="text un-notes2">1 000 ₽</p><p class="text un-notes3">30 мин</p><a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a></div>
+                    <hr class="cost__list-underlline">
+                    <div class="cost__list-object"><p class="text un-notes1">Замена программного обеспечения</p><p  class="text un-notes2">1 000 ₽</p><p class="text un-notes3">30 мин</p><a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a></div>
+                </div>
+                <div class="cost-swipe">
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc width-228">
+                            Тестирование с выдачей
+                            технического заключения</p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <img src="img/Group 10 Copy 4.svg" alt="d"> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc">
+                                Замена полифонического
+                                 динамика
+                            </p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <img src="img/Group 10 Copy 4.svg" alt="d"> 
+                            </div>
+                        </div>
+                    </div>   
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc">
+                                Замена программного обеспечения
+                            </p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a> 
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc">
+                                Диагностика
+                            </p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc width-228">
+                                Замена дисплея
+                            </p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc width-228">
+                            Тестирование с выдачей
+                            технического заключения</p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc">
+                                Замена полифонического
+                                 динамика
+                            </p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a>
+                            </div>
+                        </div>
+                    </div>   
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc">
+                                Замена программного обеспечения
+                            </p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a> 
+                            </div>
+                        </div>
+                    </div>                   
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc">
+                                Диагностика
+                            </p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "cost-swipe__object">
+                        <div>
+                            <p class="cost-swipe__title text">Ремонтные услуги</p>
+                            <p class="cost-swipe__object-disc width-228">
+                                Замена дисплея
+                            </p>
+                        </div>
+                        <div>
+                            <p class="cost-swipe__title text">Цена</p>
+                            <p class="cost-swipe__object-disc">
+                            Бесплатно</p>
+                        </div>
+                        <div>
+                            <div>
+                                <p class="cost-swipe__title text">Срок</p>
+                                <p class="cost-swipe__object-disc width-81">
+                                    30-120 мин</p>
+
+                            </div>
+                            <div>
+                                <a href="#"><img src="img/Group 10 Copy 4.svg" alt="d"></a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer class="main-footer">
+                <div class="main-footer__disc">
+                    Все цены указаны с учетом НДС.
+                    Стоимость ремонта указана на единичную услугу.
+                    Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.
+                </div>
+                <div class="main-footer__get">
+                    <a href="#"><h4>Получить коммерческое предложение</h4></a>
+                    <a href="#"><img src="img/Line.svg" alt="row"></a>
+                </div>
+                <div class="main-footer__footer">
+                    <div>
+                        <p>
+                            © 2019 CPS
+                        </p>
+                        <p>
+                        
+                            Разработано командой Apesong 
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#">
+                            Политика конфиденциальности
+                        </a>
+                    </div>
+                    <div>
+                        <p>
+                            Информация, размещенная на данной странице,
+                        </p>
+                        <p>
+                             не является публичной офертой
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
+
+</body>
 </html>

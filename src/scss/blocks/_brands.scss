@@ -1,0 +1,125 @@
+@import '../variables';
+
+.swipe {
+  height: auto;
+  width: 100%;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    overflow: hidden;
+    height: 150px;
+  }
+}
+
+.dont {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 240px));
+  grid-template-rows: minmax(0, 72px);
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    gap: 16px;
+    animation: scrol1 10s linear infinite;
+    margin-top: 16px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1119px) {
+    grid-template-columns: repeat(3, minmax(0, 224px));
+  }
+
+  div {
+    width: 100%;
+  }
+}
+
+.brand {
+  background-color: $bg-white;
+  border-radius: 4px;
+  max-width: 240px;
+  aspect-ratio: 3.3 / 1;
+  border: solid $color-border 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 16px;
+
+  img {
+    max-width: 100%;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 240px;
+    flex-shrink: 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      top: 0;
+      opacity: 0.4;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 4px; 
+    }
+
+    &:hover::after {
+      animation: op 0.1s linear forwards;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1119px) {
+    max-width: 224px;
+  }
+}
+
+.text {
+  font-family: $font-thin;
+  color: $color-text-muted;
+}
+
+.title-next {
+  background: linear-gradient(to right, $bg-main, white);
+  width: 100%;
+  padding-left: 32px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid $color-border-top;
+}
+
+#together {
+  width: 15%;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+  font-family: $font-default;
+  margin-top: 24px;
+  padding-left: 2%;
+
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.left{
+    margin-left: 1%;
+}
+@keyframes scrol1 {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(1024px); }
+}
+
+@keyframes op {
+  0% { opacity: 0.4; }
+  100% { opacity: 0; }
+}

@@ -1,17 +1,12 @@
-$bgColor: #24292e;
-$text: #fff;
+// 1. Конфигурация и сбросы
+@import 'variables';
+@import 'base';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+// 2. Логические БЭМ-блоки
+@import 'blocks/left-side';
+@import 'blocks/header-page';
+@import 'blocks/first-page';
+@import 'blocks/brands';
+@import 'blocks/types';
+@import 'blocks/prices';
+@import 'blocks/main-footer';

@@ -1,2 +1,6 @@
+style.css
+style.css.map
+*.css
+!src/scss/*.scss
+.DS_Store
 node_modules/
-dist/

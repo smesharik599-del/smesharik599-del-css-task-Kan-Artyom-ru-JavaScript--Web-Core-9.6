@@ -1,0 +1,263 @@
+@import '../variables';
+
+.first-page {
+  width: 100%;
+  background-color: $bg-main;
+  border-top: solid 1px $bg-main;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+
+  @media (min-width: 1120px) {
+    min-width: 0;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-family: $font-bold;
+    width: 304px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    gap: 12px;
+    margin-top: 24px;
+
+    @media (min-width: 1120px) {
+      margin-top: 42px;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &-part {
+      display: flex;
+      gap: 12px;
+    }
+  }
+
+  &__first-text {
+    width: 288px;
+  }
+
+  &__half-oval {
+    width: 4px;
+    height: 40px;
+    background: $color-accent;
+    border-radius: 0 20px 20px 0;
+  }
+
+  &__adaptive {
+    display: none;
+    @media (min-width: 1120px) {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.adaptive__icon {
+  display: none;
+
+  @media (min-width: 1120px) {
+    display: flex;
+    gap: 8px;
+    margin-right: 32px;
+    font-family: $font-thin;
+    font-size: 16px;
+    align-items: center;
+    font-weight: 800;
+  }
+}
+
+.adaptive__cont {
+    color: $color-text-dark;
+}
+.main-scroll {
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  overflow-y: hidden; 
+  flex-wrap: nowrap; 
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-top: 24px;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+
+  @media (min-width: 1120px) {
+    min-width: 0;
+  }
+}
+
+.scroll {
+  width: 504px;
+  display: flex;
+  overflow-y: hidden; 
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__first-block,
+  &__second-block, 
+  &__third-block, 
+  &__fourth-block, 
+  &__fifth-block {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $font-bold;
+    line-height: 24px;
+    height: 40px;
+    cursor: pointer;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-text-muted;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+  }
+
+  &__first-block {
+    margin-left: 16px;
+    width: 246px;
+  }
+
+  &__second-block { width: 258px; }
+  &__third-block { width: 143px; }
+  &__fourth-block { width: 233px; }
+  &__fifth-block {
+    margin-right: 16px;
+    width: 191px;
+  }
+}
+
+input[type="radio"]:checked + label {
+  border-radius: 6px;
+  border: solid $color-accent-light 2px;
+  background-color: $bg-white;
+}
+
+.feedback {
+  font-family: $font-bold;
+  font-weight: 500;   
+  color: $color-text-muted;
+  width: 71px;
+  display: none;
+
+  @media (min-width: 1120px) {
+    display: block;
+    margin: 16px 0 0 56px;
+  }
+}
+
+.text-block {
+  @media (min-width: 768px) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  @media (min-width: 1120px) {
+    min-width: 0;
+    gap: 20px;
+  }
+
+  &__first-text {
+    position: relative;
+    width: 288px;
+    font-family: $font-thin;
+    color: $color-text-dark;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 24px 0 0 16px;
+
+    @media (min-width: 768px) and (max-width: 1119px) {
+      width: 312px;
+      height: 208px;
+    }
+
+    @media (min-width: 1120px) {
+      flex: 1;
+      max-width: 490px;
+      height: auto;
+      min-height: 160px;
+    }
+  }
+
+  &__adaptive1 {
+    margin-top: 16px;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+
+  &__adaptive2 {
+    display: none;
+
+    @media (min-width: 1120px) {
+      display: inline;
+    }
+  }
+
+  &__next {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 16px;
+    font-family: $font-medium;
+    font-weight: 500;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-color: $bg-main;
+    color: $color-text-dark;
+
+    &-text {
+      font-family: $font-medium;
+      font-weight: 500;
+      font-size: 16px;
+      color: $color-text-dark !important;
+    }
+  }
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__main-image {
+    margin-top: 16px;
+    width: 100%;
+    max-width: 320px;
+    height: 176px;
+    margin-bottom: 35px;
+    margin-right: 50px;
+
+
+    @media (min-width: 768px) and (max-width: 1119px) {
+      width: 360px;
+      height: 208px;
+      border-radius: 4px;
+    }
+
+    @media (min-width: 1120px) {
+      max-width: 532px;
+      height: auto;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+  }
+}
