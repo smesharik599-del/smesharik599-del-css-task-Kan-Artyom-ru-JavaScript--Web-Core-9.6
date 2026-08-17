@@ -23,14 +23,14 @@ body{
 
 /* Все неактивные точки */
 .swiper-pagination-bullet {
-  background-color: #a0a0a0; /* Серый цвет */
-  opacity: 0.5;              /* Полупрозрачность (по желанию) */
+  background-color: $dotscroll-color; 
+  opacity: 0.5;  
 }
 
 /* Активная точка */
 .swiper-pagination-bullet-active {
-  background-color: #505050; /* Более тёмный серый для активной точки */
-  opacity: 1;                /* Полная непрозрачность */
+  background-color: $dotscroll-color-active; 
+  opacity: 1;                
 }
 
 .swiper-pagination {
@@ -44,7 +44,7 @@ body{
   align-items: center;
 
   @media screen and (max-width: 767px) {
-    display: flex; /* Выравнивает точки по центру снизу */
+    display: flex;
   }
 
   .swiper-pagination-bullet {
