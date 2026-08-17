@@ -1,0 +1,67 @@
+@import 'variables';
+
+@font-face {
+  font-family: 'TT Lakes-Bold';
+  src: url('assets/fonts/TTLakes-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes-Thin';
+  src: url('assets/fonts/TTLakes-ExtraLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes-Medium';
+  src: url('assets/fonts/TTLakes-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Lakes';
+  src: url('assets/fonts/TTLakes-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  background-color: $bg-main;
+}
+
+body {
+  display: block; 
+  position: relative;
+
+  @media (min-width: 1120px) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: auto 1fr;
+    align-items: flex-start;
+  }
+}
+
+main {
+  width: 100%;
+  background-color: $bg-main;
+
+  @media (min-width: 1120px) {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}

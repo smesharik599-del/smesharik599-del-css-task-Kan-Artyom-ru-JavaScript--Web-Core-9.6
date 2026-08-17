@@ -1,0 +1,57 @@
+@import '../variables';
+
+.main-footer {
+  font-family: $font-medium;
+  margin: 2.5% 0 0 1.5%;
+
+  &__disc {
+    margin-top: 5px;
+    font-family: $font-medium;
+    width: 40%;
+    @media screen and (max-width: 768px) {
+      width: 80%;
+    }
+  }
+
+  &__get {
+    display: flex;
+    align-items: center;
+    height: 24px;
+    gap: 5px;
+    margin-top: 1%;
+
+    :first-child {
+      color: $color-text-black;
+    }
+
+    a:last-child {
+      margin-top: 1.5px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 5%;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+  &__footer div p{
+    @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  div:last-child {
+    margin-right: 1.5%;
+  }
+
+  div a {
+    color: $color-text-black;
+  }
+}

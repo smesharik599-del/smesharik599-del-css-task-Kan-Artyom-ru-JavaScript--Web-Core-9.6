@@ -1,0 +1,140 @@
+@import '../variables';
+
+.left-side-background {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.9);
+
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) and (max-width: 1120px) {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100%;
+    min-height:100%;
+    z-index: 5000;
+    display: none;
+  }
+
+  @media (min-width: 1120px) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+}
+
+.left-side {
+  display: flex;          
+  position: static;        
+  left: 0;
+  top: 0;
+  width: 100%;            
+  min-height: 100% !important;        
+  background-color: $bg-white;
+  box-shadow: 1px 0 20px $color-shadow;
+  z-index: 9999;          
+  flex-direction: column;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media (min-width: 768px) and (max-width: 1119px) {
+    width: 320px;
+    position: fixed;
+    min-width: 320px;
+    height: 100%;
+    background-color: $bg-white;
+    z-index: 9999;
+    display: none;
+  }
+
+  @media (min-width: 1120px) {
+    display: flex !important;
+    // position: sticky;       
+    width: 320px;
+    min-width: 320px;       
+    height: 100%;
+  }
+}
+
+.left-side {
+  &__top-img {
+    padding-top: 18px;
+    width: 320px;
+    padding-left: 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+  }
+
+  &__search-btn {
+    margin: 0 17px 0 0;
+  }
+
+  &__group-btn {
+    margin-right: 80px;
+  }
+
+  &__half-circle {
+    background-color: $color-accent;
+    border-radius: 0px 100px 100px 0;
+    width: 4px;
+    height: 32px;
+  }
+
+  &__title {
+    display: flex;
+    gap: 24px;
+    margin-top: 50px;
+    align-items: center;
+  }
+
+  &__title-text {
+    font-family: $font-medium;
+    color: $color-text-muted;
+    font-size: 16px;
+  }
+
+  &__list-discription {
+    display: flex;
+    gap: 35px;
+    flex-direction: column;
+  }
+
+  &__disc {
+    font-family: $font-medium;
+    color: $color-text-black;
+    font-size: 16px;
+    margin-top: 32px;
+    margin-left: 24px;
+  }
+}
+
+.our-contact {
+  margin-top: 16px;
+  padding-left: 24px;
+  padding-bottom: 32px;
+
+  &__mail {
+    font-family: $font-medium;
+    font-weight: 500;
+    margin-bottom: 12px;
+    margin-top: 10px;
+  }
+
+  &__number {
+    font-family: $font-bold;
+    font-weight: 700;
+  }
+
+  &__lang {
+    margin-top: 40px;
+    font-family: $font-medium;
+  }
+
+  &__lang-button:checked + label {
+    color: $color-text-muted;
+  }
+}
