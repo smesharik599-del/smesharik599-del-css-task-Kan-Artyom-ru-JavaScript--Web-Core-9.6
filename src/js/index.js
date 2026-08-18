@@ -1,9 +1,9 @@
 import '../scss/style.scss';
-import Swiper from 'swiper/bundle'; // Импортируем бандл со всеми модулями (пагинацией)
+import Swiper from 'swiper/bundle'; 
 
 let brandsSwiper = null;
 
-// Функция включения/выключения Swiper в зависимости от ширины экрана
+
 function initBrandsSwiper() {
   const isMobile = window.innerWidth < 768;
 
@@ -12,9 +12,9 @@ function initBrandsSwiper() {
       brandsSwiper = new Swiper('.js-mobile-slider', {
         slidesPerView:'auto',
         spaceBetween: 16,
-        slidesOffsetBefore: 16,    // Отступ слева у первого слайда
-        slidesOffsetAfter: 16,     // Отступ справа у последнего слайда
-        centeredSlides: true,       // Центрируем свайпаемые карточки
+        slidesOffsetBefore: 16,    
+        slidesOffsetAfter: 16,     
+        centeredSlides: true,       
         centeredSlidesBounds: true,
         pagination: {
           el: '.swiper-pagination',
@@ -24,7 +24,7 @@ function initBrandsSwiper() {
     }
   } else {
     if (brandsSwiper) {
-      brandsSwiper.destroy(true, true); // Полностью уничтожаем слайдер на ПК и планшетах
+      brandsSwiper.destroy(true, true); 
       brandsSwiper = null;
     }
   }
@@ -43,11 +43,9 @@ function updateDesktopVisibility() {
   }
 }
 
-// Запускаем сразу и при изменении размера окна
 initBrandsSwiper();
 window.addEventListener('resize', initBrandsSwiper);
 
-// Ваша исходная логика для меню и кнопок "Показать всё"
 const allBoxes = document.querySelectorAll('.brands__item');
 const active = document.querySelectorAll('.brands__item--active');
 const univsr = document.getElementById('together');
