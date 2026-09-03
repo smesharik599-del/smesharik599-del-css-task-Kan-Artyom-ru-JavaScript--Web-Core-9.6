@@ -11,6 +11,8 @@
 @import 'blocks/prices';
 @import 'blocks/main-footer';
 
+@import 'globals';
+@import 'blocks/our-contact';
 @import 'swiper/swiper-bundle.css';
 
 body{
@@ -21,13 +23,13 @@ body{
     }
 }
 
-/* Все неактивные точки */
+
 .swiper-pagination-bullet {
   background-color: $dotscroll-color; 
   opacity: 0.5;  
 }
 
-/* Активная точка */
+
 .swiper-pagination-bullet-active {
   background-color: $dotscroll-color-active; 
   opacity: 1;                
@@ -35,7 +37,7 @@ body{
 
 .swiper-pagination {
   position: relative;
-  margin-top: 16px;
+  margin-top: 32px;
   bottom: 0;
   left: 0;
   width: 100%;

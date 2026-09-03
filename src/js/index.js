@@ -11,8 +11,8 @@ function initBrandsSwiper() {
     if (!brandsSwiper) {
       brandsSwiper = new Swiper('.js-mobile-slider', {
         slidesPerView:'auto',
-        spaceBetween: 16,
-        slidesOffsetBefore: 16,    
+        spaceBetween: 8,
+        // slidesOffsetBefore: 16,    
         slidesOffsetAfter: 16,     
         centeredSlides: true,       
         centeredSlidesBounds: true,

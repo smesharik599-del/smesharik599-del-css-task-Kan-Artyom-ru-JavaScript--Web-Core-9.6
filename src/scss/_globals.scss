@@ -1,0 +1,25 @@
+
+@import './variables';
+.button {
+  display: flex;
+  gap: 10px;
+  font-family: $font-default;
+  margin-top: 24px;
+  padding-left: 2%;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &--left {
+    margin-left: 1%;
+  }
+}
+
+.text {
+  font-family: $font-thin;
+  color: $color-text-muted;
+}
+
+.width-228 { width: 228px; }
+.width-81 { width: 100px; }

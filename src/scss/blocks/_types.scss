@@ -3,17 +3,21 @@
 .part2 {
   margin-left: 10px;
 
-  @media screen and (max-width: 767px) {
-    overflow: hidden;
-  }
+    @media screen and (max-width: 767px) {
+      // overflow: hidden;
+    }
 
   &__tech-name {
     padding-left: 32px;
+    margin-top: 16px;
     height: 56px;
     background: linear-gradient(to right, $bg-main, white);
     display: flex;
     align-items: center;
     border-top: 1px solid $color-border-top;
+      @media screen and (max-width: 767px) {
+      height: 80px;
+    }
   }
 }
 
@@ -55,6 +59,12 @@
     justify-content: space-between;
     color: $color-text-black;
 
+    @media screen and (max-width: 767px) {
+      margin:0;
+      padding:0;
+      gap: 0;
+    }
+
     p {
       margin: 16px 0 0 16px;
     }
@@ -76,7 +86,8 @@
   @media screen and (max-width: 767px) {
     flex-wrap: nowrap;
     justify-content: flex-start;
-    gap: 0;
+    gap: 0 8px;
+    margin-right:-60px
   }
 }
 
@@ -97,6 +108,8 @@
   .swiper-pagination-bullet {
     display: inline-block;
     margin: 0 4px;
+    width: 12px;
+    height: 12px;
   }
 }
 

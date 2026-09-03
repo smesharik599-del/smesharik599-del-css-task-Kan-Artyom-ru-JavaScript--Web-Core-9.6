@@ -111,30 +111,3 @@
     margin-left: 24px;
   }
 }
-
-.our-contact {
-  margin-top: 16px;
-  padding-left: 24px;
-  padding-bottom: 32px;
-
-  &__mail {
-    font-family: $font-medium;
-    font-weight: 500;
-    margin-bottom: 12px;
-    margin-top: 10px;
-  }
-
-  &__number {
-    font-family: $font-bold;
-    font-weight: 700;
-  }
-
-  &__lang {
-    margin-top: 40px;
-    font-family: $font-medium;
-  }
-
-  &__lang-button:checked + label {
-    color: $color-text-muted;
-  }
-}

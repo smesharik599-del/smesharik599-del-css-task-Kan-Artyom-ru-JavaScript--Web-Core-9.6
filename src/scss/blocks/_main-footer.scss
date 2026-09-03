@@ -2,10 +2,10 @@
 
 .main-footer {
   font-family: $font-medium;
-  margin: 2.5% 0 0 1.5%;
-
+  margin: 2.5% 0 0 0;
   &__disc {
     margin-top: 5px;
+    margin-left: 1.5%;
     font-family: $font-medium;
     width: 40%;
     @media screen and (max-width: 768px) {
@@ -19,6 +19,7 @@
     height: 24px;
     gap: 5px;
     margin-top: 1%;
+    margin-left: 1.5%;
 
     :first-child {
       color: $color-text-black;
@@ -35,16 +36,22 @@
     align-items: flex-start;
     justify-content: space-between;
     margin-top: 5%;
+    color: $color-text-muted;
     @media screen and (max-width: 768px) {
       flex-direction: column;
       align-items: center;
       gap: 16px;
+      margin-left: -3%;
+      width: 103%;
+      border-top: 1px solid $color-border-top;
+      box-sizing: content-box;
     }
   }
   &__footer div p{
     @media screen and (max-width: 768px) {
       display: flex;
       justify-content: center;
+      text-align: center;
     }
   }
   div:last-child {
@@ -52,6 +59,6 @@
   }
 
   div a {
-    color: $color-text-black;
+    color: $color-text-muted;
   }
 }
